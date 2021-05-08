@@ -1,7 +1,6 @@
 # Newsletter
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/justoverclock/flarum-ext-newsletter.svg)](https://packagist.org/packages/justoverclock/flarum-ext-newsletter) [![Total Downloads](https://img.shields.io/packagist/dt/justoverclock/flarum-ext-newsletter.svg)](https://packagist.org/packages/justoverclock/flarum-ext-newsletter)
-
+![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://poser.pugx.org/justoverclock/flarum-ext-newsletter/v)](//packagist.org/packages/justoverclock/flarum-ext-newsletter) [![Total Downloads](https://poser.pugx.org/justoverclock/flarum-ext-newsletter/downloads)](//packagist.org/packages/justoverclock/flarum-ext-newsletter)
 A [Flarum](http://flarum.org) extension. Allow admin to collect Email address through ElasticMail Api
 
 ### Usage
