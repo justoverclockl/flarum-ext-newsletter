@@ -60,11 +60,18 @@ extend(IndexPage.prototype, 'oncreate', function () {
     });
   }
   jQuery(function () {
-    const pubAcc = app.forum.attribute('PubAccount');
-    const listmail = app.forum.attribute('ListName');
+      const pubAcc = app.forum.attribute('PubAccount');
+      const listmail = app.forum.attribute('ListName');
     SetupNewsletterSubscribe(pubAcc, listmail, 'subscribeForm', function () {
+      const thankU = app.translator.trans('flarum-ext-newsletter.forum.modalthanku');
+      const ModalText = app.translator.trans('flarum-ext-newsletter.forum.modaltext');
+      // Inseriamo il popup con le variabili per la traduzione.
+      Swal.fire({
+        icon: 'success',
+        title: thankU,
+        text: ModalText,
+      });
       // Ripuliamo il form dopo essere stato inviato!
-      Swal.fire('Thank You!', 'You are now subscribed to our Newsletter!', 'success');
       document.getElementById('subscribeForm').reset();
     });
   });
