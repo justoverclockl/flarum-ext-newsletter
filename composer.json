@@ -1,6 +1,6 @@
 {
   "name": "justoverclock/flarum-ext-newsletter",
-  "description": "Allow admin to collect Email address through EmailJs Api",
+  "description": "Allow admin to collect Email address through ElasticEmail Api",
   "keywords": [
     "flarum"
   ],
@@ -16,17 +16,13 @@
     {
       "name": "Marco Colia",
       "email": "info@flarum.it",
-      "role": "Developer"
+      "role": "Developer",
+        "homepage": "https://flarum.it"
     }
   ],
   "autoload": {
     "psr-4": {
       "Justoverclock\\Newsletter\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Justoverclock\\Newsletter\\Tests\\": "tests/"
     }
   },
   "extra": {
@@ -42,20 +38,5 @@
     "flagrow": {
       "discuss": ""
     }
-  },
-  "scripts": {
-    "test": [
-      "@test:unit",
-      "@test:integration"
-    ],
-    "test:unit": "phpunit -c tests/phpunit.unit.xml",
-    "test:integration": "phpunit -c tests/phpunit.integration.xml",
-    "test:setup": "@php tests/integration/setup.php"
-  },
-  "scripts-descriptions": {
-    "test": "Runs all tests.",
-    "test:unit": "Runs all unit tests.",
-    "test:integration": "Runs all integration tests.",
-    "test:setup": "Sets up a database for use with integration tests. Execute this only once."
   }
 }

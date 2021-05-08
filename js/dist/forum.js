@@ -3766,6 +3766,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var flarum_app__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(flarum_app__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_3__);
+/*
+ * This file is part of justoverclock/flarum-ext-guestengagement.
+ *
+ * Copyright (c) 2021 Marco Colia.
+ * https://flarum.it
+ *
+ * For the full copyright and license information, please view the LICENSE.md
+ * file that was distributed with this source code.
+ */
 
 
 
@@ -3778,17 +3787,17 @@ flarum_app__WEBPACK_IMPORTED_MODULE_2___default.a.initializers.add('justovercloc
       id: 'titleNl'
     }, ['News', m('span', '.letter')]), m('p', {
       className: 'descNl'
-    }, 'Subscribe to our newsletter. Please enter your email and press submit'), m('form', {
+    }, flarum_app__WEBPACK_IMPORTED_MODULE_2___default.a.translator.trans('flarum-ext-newsletter.forum.subscribe')), m('form', {
       id: 'subscribeForm'
     }, [m('input', {
       className: 'fieldinp',
       id: 'email-input',
-      type: 'text',
+      type: 'email',
       placeholder: 'Subscribe to Flarum'
     }), m('button', {
       className: 'subscbutt',
       type: 'submit'
-    }, 'Submit')])), -100);
+    }, flarum_app__WEBPACK_IMPORTED_MODULE_2___default.a.translator.trans('flarum-ext-newsletter.forum.submitbutton'))])), -100);
   });
 });
 Object(flarum_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_forum_components_IndexPage__WEBPACK_IMPORTED_MODULE_1___default.a.prototype, 'oncreate', function () {

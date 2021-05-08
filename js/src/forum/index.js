@@ -1,3 +1,13 @@
+/*
+ * This file is part of justoverclock/flarum-ext-guestengagement.
+ *
+ * Copyright (c) 2021 Marco Colia.
+ * https://flarum.it
+ *
+ * For the full copyright and license information, please view the LICENSE.md
+ * file that was distributed with this source code.
+ */
+
 import { extend } from 'flarum/extend';
 import IndexPage from 'flarum/forum/components/IndexPage';
 import app from 'flarum/app';
@@ -11,10 +21,10 @@ app.initializers.add('justoverclock/flarum-ext-newsletter', () => {
         m('div',
           { className: 'alignews' },
           m('h1', { id: 'titleNl' }, ['News', m('span', '.letter')]),
-          m('p', {className: 'descNl'}, 'Subscribe to our newsletter. Please enter your email and press submit'),
+          m('p', {className: 'descNl'}, app.translator.trans('flarum-ext-newsletter.forum.subscribe')),
           m('form', { id: 'subscribeForm' }, [
-            m('input', { className: 'fieldinp', id: 'email-input', type: 'text', placeholder: 'Subscribe to Flarum' }),
-            m('button', { className: 'subscbutt', type: 'submit' }, 'Submit'),
+            m('input', { className: 'fieldinp', id: 'email-input', type: 'email', placeholder: 'Subscribe to Flarum' }),
+            m('button', { className: 'subscbutt', type: 'submit' }, app.translator.trans('flarum-ext-newsletter.forum.submitbutton')),
           ])
         ),
         -100
