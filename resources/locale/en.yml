@@ -1,0 +1,6 @@
+flarum-ext-newsletter:
+  admin:
+    pubacc: Public Account ID
+    pubaccdesc: Find your public account ID here https://elasticemail.com/account#/account/security
+    listn: List Name
+    listndesc: Add the name of your list created at elasticmail
