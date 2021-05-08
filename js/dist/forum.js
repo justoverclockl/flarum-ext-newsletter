@@ -3802,7 +3802,10 @@ flarum_app__WEBPACK_IMPORTED_MODULE_2___default.a.initializers.add('justovercloc
     }), m('label', {
       "for": 'checkme',
       className: 'checkme'
-    }, 'Accept to Submit')), m('input', {
+    }, m("a", {
+      href: "https://elasticemail.com/resources/usage-policies/privacy-policy",
+      target: "blank"
+    }, flarum_app__WEBPACK_IMPORTED_MODULE_2___default.a.translator.trans('flarum-ext-newsletter.forum.prconsent')))), m('input', {
       className: 'fieldinp',
       id: 'email-input',
       type: 'email',
@@ -3835,7 +3838,9 @@ Object(flarum_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_forum_compon
         listName: listName
       }, function () {}, 'json').done(function (result) {
         if (result.success === true) {
-          onSuccess();
+          onSuccess(); //Nascondo il pulsante dopo l'invio o il checkbox funziona al contrario
+
+          $('#button1').hide();
         }
       }).fail(function () {// e se fallisce? devo prevedere un alert di errore.
       });

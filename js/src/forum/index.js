@@ -31,7 +31,15 @@ app.initializers.add('justoverclock/flarum-ext-newsletter', () => {
               'div',
               { className: 'checkboxNl' },
               m('input', { type: 'checkbox', id: 'checkme', className: 'checkme' }),
-              m('label', { for: 'checkme', className: 'checkme' }, 'Accept to Submit')
+              m(
+                'label',
+                { for: 'checkme', className: 'checkme' },
+                m(
+                  'a',
+                  { href: 'https://elasticemail.com/resources/usage-policies/privacy-policy', target: 'blank' },
+                  app.translator.trans('flarum-ext-newsletter.forum.prconsent')
+                )
+              )
             ),
             m('input', { className: 'fieldinp', id: 'email-input', type: 'email', placeholder: 'Subscribe to Flarum' }),
             m('button', { className: 'subscbutt', type: 'submit', id: 'button1' }, app.translator.trans('flarum-ext-newsletter.forum.submitbutton')),
@@ -70,6 +78,8 @@ extend(IndexPage.prototype, 'oncreate', function () {
         .done(function (result) {
           if (result.success === true) {
             onSuccess();
+            //Nascondo il pulsante dopo l'invio o il checkbox funziona al contrario
+            $('#button1').hide();
           }
         })
         .fail(function () {
