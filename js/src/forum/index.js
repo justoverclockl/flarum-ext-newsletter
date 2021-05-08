@@ -8,6 +8,9 @@
  * file that was distributed with this source code.
  */
 
+/* global m */
+/* global $ */
+
 import { extend } from 'flarum/extend';
 import IndexPage from 'flarum/forum/components/IndexPage';
 import app from 'flarum/app';
@@ -24,12 +27,27 @@ app.initializers.add('justoverclock/flarum-ext-newsletter', () => {
           m('h1', { id: 'titleNl' }, ['News', m('span', '.letter')]),
           m('p', { className: 'descNl' }, app.translator.trans('flarum-ext-newsletter.forum.subscribe')),
           m('form', { id: 'subscribeForm' }, [
+            m(
+              'div',
+              { className: 'checkboxNl' },
+              m('input', { type: 'checkbox', id: 'checkme', className: 'checkme' }),
+              m('label', { for: 'checkme', className: 'checkme' }, 'Accept to Submit')
+            ),
             m('input', { className: 'fieldinp', id: 'email-input', type: 'email', placeholder: 'Subscribe to Flarum' }),
-            m('button', { className: 'subscbutt', type: 'submit' }, app.translator.trans('flarum-ext-newsletter.forum.submitbutton')),
+            m('button', { className: 'subscbutt', type: 'submit', id: 'button1' }, app.translator.trans('flarum-ext-newsletter.forum.submitbutton')),
           ])
         ),
         -100
       );
+  });
+});
+extend(IndexPage.prototype, 'oncreate', function () {
+  $(document).ready(function () {
+    //Aggiungiamo la condizione del check obbligatorio per inviare il modulo
+    $('#button1').hide();
+    $('#checkme').mouseup(function () {
+      $('#button1').toggle();
+    });
   });
 });
 extend(IndexPage.prototype, 'oncreate', function () {
@@ -55,13 +73,13 @@ extend(IndexPage.prototype, 'oncreate', function () {
           }
         })
         .fail(function () {
-          // e se fallisce?...
+          // e se fallisce? devo prevedere un alert di errore.
         });
     });
   }
   jQuery(function () {
-      const pubAcc = app.forum.attribute('PubAccount');
-      const listmail = app.forum.attribute('ListName');
+    const pubAcc = app.forum.attribute('PubAccount');
+    const listmail = app.forum.attribute('ListName');
     SetupNewsletterSubscribe(pubAcc, listmail, 'subscribeForm', function () {
       const thankU = app.translator.trans('flarum-ext-newsletter.forum.modalthanku');
       const ModalText = app.translator.trans('flarum-ext-newsletter.forum.modaltext');
