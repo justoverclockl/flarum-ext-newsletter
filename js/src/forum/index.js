@@ -18,10 +18,11 @@ app.initializers.add('justoverclock/flarum-ext-newsletter', () => {
     if (app.current.matches(IndexPage))
       navItems.add(
         'Newsletter',
-        m('div',
+        m(
+          'div',
           { className: 'alignews' },
           m('h1', { id: 'titleNl' }, ['News', m('span', '.letter')]),
-          m('p', {className: 'descNl'}, app.translator.trans('flarum-ext-newsletter.forum.subscribe')),
+          m('p', { className: 'descNl' }, app.translator.trans('flarum-ext-newsletter.forum.subscribe')),
           m('form', { id: 'subscribeForm' }, [
             m('input', { className: 'fieldinp', id: 'email-input', type: 'email', placeholder: 'Subscribe to Flarum' }),
             m('button', { className: 'subscbutt', type: 'submit' }, app.translator.trans('flarum-ext-newsletter.forum.submitbutton')),
@@ -45,8 +46,7 @@ extend(IndexPage.prototype, 'oncreate', function () {
             publicAccountId: publicAccountId,
             listName: listName,
           },
-          function () {
-          },
+          function () {},
           'json'
         )
         .done(function (result) {
@@ -64,12 +64,8 @@ extend(IndexPage.prototype, 'oncreate', function () {
     const listmail = app.forum.attribute('ListName');
     SetupNewsletterSubscribe(pubAcc, listmail, 'subscribeForm', function () {
       // Ripuliamo il form dopo essere stato inviato!
-      Swal.fire(
-        'Thank You!',
-        'You are now subscribed to our Newsletter!',
-        'success'
-      );
-      document.getElementById("subscribeForm").reset();
+      Swal.fire('Thank You!', 'You are now subscribed to our Newsletter!', 'success');
+      document.getElementById('subscribeForm').reset();
     });
   });
-})
+});
