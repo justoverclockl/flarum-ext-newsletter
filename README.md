@@ -1,6 +1,3 @@
-![1](https://user-images.githubusercontent.com/79002016/117533809-12a85b80-afef-11eb-89de-86dea32375af.png)
-![2](https://user-images.githubusercontent.com/79002016/117533811-1340f200-afef-11eb-8a53-8c81de9cf764.png)
-![3](https://user-images.githubusercontent.com/79002016/117533813-13d98880-afef-11eb-9c78-fe6230cd4014.png)
 # Newsletter
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/justoverclock/flarum-ext-newsletter.svg)](https://packagist.org/packages/justoverclock/flarum-ext-newsletter) [![Total Downloads](https://img.shields.io/packagist/dt/justoverclock/flarum-ext-newsletter.svg)](https://packagist.org/packages/justoverclock/flarum-ext-newsletter)
@@ -38,5 +35,10 @@ php flarum cache:clear
 ### Links
 
 - [Packagist](https://packagist.org/packages/justoverclock/flarum-ext-newsletter)
-- [GitHub](https://github.com/justoverclock/flarum-ext-newsletter)
-- [Discuss](https://discuss.flarum.org/d/PUT_DISCUSS_SLUG_HERE)
+- [GitHub](https://github.com/justoverclockl/flarum-ext-newsletter)
+
+### Screenshot
+
+![1](https://user-images.githubusercontent.com/79002016/117533809-12a85b80-afef-11eb-89de-86dea32375af.png)
+![2](https://user-images.githubusercontent.com/79002016/117533811-1340f200-afef-11eb-8a53-8c81de9cf764.png)
+![3](https://user-images.githubusercontent.com/79002016/117533813-13d98880-afef-11eb-9c78-fe6230cd4014.png)
