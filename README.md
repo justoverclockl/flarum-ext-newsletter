@@ -2,7 +2,19 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) [![Latest Stable Version](https://img.shields.io/packagist/v/justoverclock/flarum-ext-newsletter.svg)](https://packagist.org/packages/justoverclock/flarum-ext-newsletter) [![Total Downloads](https://img.shields.io/packagist/dt/justoverclock/flarum-ext-newsletter.svg)](https://packagist.org/packages/justoverclock/flarum-ext-newsletter)
 
-A [Flarum](http://flarum.org) extension. Allow admin to collect Email address through EmailJs Api
+A [Flarum](http://flarum.org) extension. Allow admin to collect Email address through ElasticMail Api
+
+### Usage
+
+These are the Step:
+
+- Create an account on https://elasticemail.com/ 
+- Setup your Api Smtp https://elasticemail.com/account#/settings/new/manage-smtp
+- Create a new Email List here: https://elasticemail.com/account#/contacts/new/lists?page=1&perPage=25
+- Find your Public Account ID here https://elasticemail.com/account#/account/security
+- Paste your Public Account ID into admin panel of your Flarum
+- Paste the name of your List into admin panel of your Flarum
+- Your done! :)
 
 ### Installation
 
