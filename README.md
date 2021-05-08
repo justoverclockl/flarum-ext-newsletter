@@ -21,14 +21,13 @@ These are the Step:
 Install with composer:
 
 ```sh
-composer require justoverclock/flarum-ext-newsletter:"*"
+composer require justoverclock/flarum-ext-newsletter
 ```
 
 ### Updating
 
 ```sh
-composer update justoverclock/flarum-ext-newsletter:"*"
-php flarum migrate
+composer update justoverclock/flarum-ext-newsletter
 php flarum cache:clear
 ```
 
